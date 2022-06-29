@@ -14,9 +14,11 @@ def index(request):
 
 
 def email_detail(request, pk):
+    email = get_object_or_404(Email, pk=pk)
     passwords = Password.objects.filter(email = pk)
     context = {
         "passwords": passwords,
+        "email": email,
         "email_id": pk
     }
     return render(request, "passwords/email_detail.html", context)
@@ -37,6 +39,7 @@ def password_update(request, pk):
 
     context = {
         "form": form,
+        "email": password_instance.email,
     }
 
     return render(request, "passwords/password_update.html", context)
