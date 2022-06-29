@@ -62,7 +62,7 @@ def password_add(request, pk):
     email = get_object_or_404(Email, pk=pk)
 
     if request.method == "POST":
-        form = PasswordCreateForm(request.POST)
+        form = PasswordCreateForm()
         obj = form.save_form(request.POST, email)
         obj.save()
         return redirect("email_detail", pk=pk)
