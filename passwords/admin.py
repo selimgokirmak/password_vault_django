@@ -6,6 +6,7 @@ from .models import Email, Password
 
 class EmailAdmin(admin.ModelAdmin):
     list_display = ["email"]
+    ordering = ["-email"]
 
 
 class PasswordAdmin(admin.ModelAdmin):
