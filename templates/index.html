@@ -8,12 +8,15 @@
 
 {% block content %}
 
-<div class="container">
+<div class="emails">
     {% for email in emails %}
-        <div class="container">
-            <a href="">{{email}}</a>
+        <div class="email">
+            <a href="{% url 'email_detail' email.id %}">{{email}}</a>
         </div>
     {% endfor %}
+    <div class="add_button">
+        <a class="btn btn-outline-primary fw-bold" href="" role="button">E-posta Ekle</a>
+    </div>
 </div>
 
 {% endblock content %}

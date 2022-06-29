@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Email(models.Model):
@@ -19,3 +20,7 @@ class Password(models.Model):
 
     def __str__(self):
         return self.website
+
+    def get_absolute_url(self):
+        return reverse("email_detail", kwargs={"pk": self.pk})
+    

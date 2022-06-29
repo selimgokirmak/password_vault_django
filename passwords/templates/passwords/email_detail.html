@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'passwords/css/email_detail.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+
+<table>
+    <tr>
+        <th>Website</th>
+        <th>Password</th>
+        <th>Password Old</th>
+        <th>Change Date</th>
+        <th>Username</th>
+        <th>Extra Info</th>
+    </tr>
+{% for x in passwords %}
+    <tr>
+        <td><a href="{% url 'password_update' x.id %}">{{x.website}}</a></td>
+        <td>{{x.password}}</td>
+        <td>{{x.password_old}}</td>
+        <td>{{x.change_date}}</td>
+        <td>{{x.username}}</td>
+        <td>{{x.extra_info}}</td>
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock content %}
