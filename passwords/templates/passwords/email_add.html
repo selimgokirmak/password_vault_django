@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'passwords/css/email_add.css' %}">
+{% endblock head %}
+
+
+{% block content %}
+<div class="email">
+    <form class="create_email fw-bold" action="" method="POST">
+        {% csrf_token %}
+        <div id="email" class="form-group">
+            {{form.email|as_crispy_field}}
+        </div>
+        <div id="bttn">
+            <button id="btn" class="btn btn-outline-primary fw-bold" type="submit">Kaydet</button>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}
+

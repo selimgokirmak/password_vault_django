@@ -9,7 +9,7 @@ class EmailAdmin(admin.ModelAdmin):
 
 
 class PasswordAdmin(admin.ModelAdmin):
-    list_display = ["email", "website", "password", "password_old", "change_date", "username", "extra_info"]
+    list_display = ["email", "website", "password", "password_old", "username", "extra_info"]
     ordering = ["email"]
     list_filter = ["email"]
 

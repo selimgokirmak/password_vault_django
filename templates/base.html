@@ -17,7 +17,9 @@
     <title>Document</title>
 </head>
 <body>
-<a href="{% url 'index' %}">Home</a>
+<div class="container">
+    <a class="fw-bold text-dark" style="font-size:26px;" href="{% url 'index' %}">Home</a>
+</div>
 <div class="bodycontainer">
     {% block content %}
     {% endblock content %}

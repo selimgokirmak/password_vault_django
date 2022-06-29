@@ -7,13 +7,12 @@
 
 
 {% block content %}
-
+<div class="detail">
 <table>
     <tr>
         <th>Website</th>
         <th>Password</th>
         <th>Password Old</th>
-        <th>Change Date</th>
         <th>Username</th>
         <th>Extra Info</th>
     </tr>
@@ -22,11 +21,15 @@
         <td><a href="{% url 'password_update' x.id %}">{{x.website}}</a></td>
         <td>{{x.password}}</td>
         <td>{{x.password_old}}</td>
-        <td>{{x.change_date}}</td>
         <td>{{x.username}}</td>
         <td>{{x.extra_info}}</td>
     </tr>
 {% endfor %}
 </table>
+<div class="bttn">
+    <a class="btn btn-outline-primary fw-bold" href="{% url 'password_add' email_id %}" role="button">Yeni Kayıt Ekle</a>
+</div>
+</div>
+
 
 {% endblock content %}

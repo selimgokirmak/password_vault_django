@@ -1,0 +1,12 @@
+.email {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #F8F8FF;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+}

@@ -1,8 +1,16 @@
+.detail {
+    display: inline-block;
+    margin: 50px 200px;
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: ghostwhite;
+}
+
 table {
     border-collapse: collapse;
     margin: 0 auto;
-    margin-top: 100px;
-    background-color: ghostwhite;
+    background-color: rgb(220, 220, 228);
 }
 
 td, th {
@@ -13,4 +21,14 @@ td, th {
 
 tr:nth-child(even) {
     background-color: rgb(248, 236, 221);
+}
+
+.bttn {
+    width: 100%;
+    margin: 5px auto;
+    margin-bottom: 0;
+}
+
+a {
+    width: 100%;
 }
